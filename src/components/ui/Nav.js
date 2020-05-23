@@ -13,8 +13,8 @@ export default function Nav() {
 
 const NavWrapper = styled.div`
     z-index: 5;
-    height: 55px;
-    width: 100vw;
+    height: 90px;
+    width: 100%;
     background-color: #D3E1DB;
     padding: 20px calc(20px - (100vw - 100%)) 20px 20px;
     display: flex;

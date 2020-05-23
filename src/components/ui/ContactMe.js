@@ -7,7 +7,7 @@ export default function ContactMe() {
     return (
         <FooterWrapper>
             <div className='contacts'>
-                <a><FontAwesomeIcon icon={faMapMarkerAlt} size="1x"/> Montreal, QC</a>
+                <div><FontAwesomeIcon icon={faMapMarkerAlt} size="1x"/> Montreal, QC</div>
                 <a href="https://github.com/tumiduong"><FontAwesomeIcon icon={['fab', 'github']} size="1x"/> tumiduong</a>
                 <a href="https://www.linkedin.com/in/tumiduong"><FontAwesomeIcon icon={['fab', 'linkedin']} size="1x"/> tumiduong</a>
                 <a href="mailto:duong.julie@live.com" className='email'><FontAwesomeIcon icon={faEnvelopeSquare} size="1x"/> duong.julie@live.com</a>
@@ -29,7 +29,7 @@ const FooterWrapper = styled.div`
         display: flex;
         flex-direction: column;
 
-        a {
+        a, div {
             color: #545E56;
             text-decoration: none;
             font-size: 14px;
