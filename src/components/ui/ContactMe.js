@@ -20,6 +20,7 @@ const FooterWrapper = styled.div`
     margin: 50px auto 20px auto;
     border-top: 1px solid #545E56;
     width: 80%;
+    padding: 0px calc(20px - (100vw - 100%)) 0px 20px;
  
     .contacts {
         margin: 20px 0px;

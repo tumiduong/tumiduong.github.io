@@ -57,6 +57,7 @@ const Wrapper = styled.div`
     font-family: 'Roboto', sans-serif;
 
     .home-page {
+        padding: 20px calc(20px - (100vw - 100%)) 20px 20px;
         margin-top: 200px;
         color: #545E56;
         text-align: center;

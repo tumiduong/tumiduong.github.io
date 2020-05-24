@@ -30,7 +30,10 @@ export default function ProjectCollapse(props) {
 }
 
 const Wrapper = styled.div`
+    width: 850px;
     margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
 
     .collapse-content {
         background: white;
@@ -76,7 +79,17 @@ const Wrapper = styled.div`
         }
     }
 
+    @media (max-width: 992px) {
+        width: 700px;
+    }
+
+    @media (max-width: 768px) {
+        width: 500px;
+    }
+
     @media (max-width: 576px) {
+        width: 350px;
+
         .project-name {
             font-size: 14px;
 

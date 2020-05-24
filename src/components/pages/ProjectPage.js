@@ -85,29 +85,9 @@ const Wrapper = styled.div`
     font-family: 'Roboto', sans-serif;
     color: #545E56;
     margin-top: 100px;
-    padding: 20px calc(20px - (100vw - 100%)) 20px 0px;
-
+    
     .project-container {
-        width: 850px;
-        margin: auto;
-    }
-
-    @media (max-width: 992px) {
-        .project-container {
-            width: 700px;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .project-container {
-            width: 500px;
-        }
-    }
-
-    @media (max-width: 576px) {
-        padding: 20px 0px 20px 0px;
-        .project-container {
-            width: 350px;
-        }
+        padding: 20px calc(20px - (100vw - 100%)) 20px 20px;
+        width: 100%;
     }
 `
