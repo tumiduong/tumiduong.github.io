@@ -39,7 +39,7 @@ const Wrapper = styled.div`
         padding: 15px;
 
         img {
-            max-width: 95%;
+            max-width: 98%;
             height: auto;
             display: block;
             margin-left: auto;
@@ -72,6 +72,16 @@ const Wrapper = styled.div`
     
             &.open {
                 transform: rotate(180deg);
+            }
+        }
+    }
+
+    @media (max-width: 576px) {
+        .project-name {
+            font-size: 14px;
+
+            .project-stack {
+                font-size: 10px;
             }
         }
     }

@@ -88,7 +88,26 @@ const Wrapper = styled.div`
     padding: 20px calc(20px - (100vw - 100%)) 20px 0px;
 
     .project-container {
-        width: 750px;
+        width: 850px;
         margin: auto;
+    }
+
+    @media (max-width: 992px) {
+        .project-container {
+            width: 700px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .project-container {
+            width: 500px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        padding: 20px 0px 20px 0px;
+        .project-container {
+            width: 350px;
+        }
     }
 `

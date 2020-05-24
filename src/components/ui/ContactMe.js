@@ -22,7 +22,7 @@ const FooterWrapper = styled.div`
     width: 80%;
  
     .contacts {
-        margin: 20px 0 20px 0;
+        margin: 20px 0px;
         border-left: 1px solid #545E56;
         padding: 15px;
         float: right;
@@ -40,6 +40,14 @@ const FooterWrapper = styled.div`
                 color: #70A9A1;
             }
 
+        }
+    }
+
+    @media (max-width: 768px) {
+        .contacts {
+            border: none;
+            float: left;
+            margin: 10px 0px;
         }
     }
 `

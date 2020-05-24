@@ -79,7 +79,7 @@ const Wrapper = styled.div`
             .line-deco:before {
                 content: '';
                 display: block;
-                width: 300px;
+                width: 30vw;
                 height: 1px;
                 background-color: #545E56;
                 margin: 15px;
@@ -103,6 +103,7 @@ const Wrapper = styled.div`
 
             .list {
                 list-style-type: none;
+                padding: 0px 25px;
 
                 .list-title {
                     font-weight: 700;
@@ -113,10 +114,47 @@ const Wrapper = styled.div`
 
         .about-me {
             margin: 50px 0 100px 0;
+            padding: 0px 25px;
         
             a {
                 color: #70A9A1;
                 text-decoration: none;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .home-page {
+            .name {
+                font-size: 60px;
+            }
+
+            .title {
+                font-size: 16px;
+            }
+
+            .stack-list {
+                font-size: 14px;
+
+                .list {
+                    padding: 0px 15px;
+                }
+            }
+
+            .about-me {
+                font-size: 14px;
+            }
+        }
+    }
+
+    @media (max-width: 576px) {
+        .home-page {
+            .name {
+                font-size: 50px;
+            }
+
+            .stack-list {
+                font-size: 12px;
             }
         }
     }
