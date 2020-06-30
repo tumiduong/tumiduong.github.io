@@ -19,7 +19,8 @@ export default function ProjectCollapse(props) {
                         onExited={() => setStatus(false)}
                         onEntering={() => setStatus(true)}>
                    <div className="collapse-content">
-                    {props.description}
+                    <p>{props.description}</p>
+                    {props.live && <a className='live-link' href={props.live}>LIVE</a>}
                     <a href={props.repo}><img src={props.image} alt={props.project}/></a>
                    </div>
                 </Collapse>
@@ -40,6 +41,16 @@ const Wrapper = styled.div`
         border-radius: 0 0 5px 5px;
         border: 1px #EBEDE6 solid;
         padding: 15px;
+
+        .live-link {
+            font-weight: bold;
+            text-decoration: none;
+            color: #70A9A1;
+
+            &:hover {
+                color: #007C77;
+            }
+        }
 
         img {
             max-width: 98%;

@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import ProjectCollapse from '../project/ProjectCollapse';
 
 export default function ProjectPage() {
-    const [projectOpen, setProjectOpen] = useState('Mnemosyne');
+    const [projectOpen, setProjectOpen] = useState('Pokédex');
 
     const toggle = (project) => {
         if (project === projectOpen) {
@@ -22,11 +22,22 @@ export default function ProjectPage() {
             <div className='project-container'>
                 <ProjectCollapse 
                     toggle={toggle}
+                    project='Pokédex'
+                    stack='Vue.js, PokéAPI'
+                    description='Pokédex built with Vue.js. Explore the stats of up to 807 different Pokémon! (Project in progress)'
+                    image='./pokedex-espeon.png'
+                    repo='https://github.com/tumiduong/pokedex'
+                    live='https://tumiduong.github.io/pokedex/'
+                    isOpen={projectOpen === 'Pokédex'}
+                />
+                <ProjectCollapse 
+                    toggle={toggle}
                     project='Mnemosyne'
                     stack='ReactJS, Node.js, Express, Knex.js'
                     description='Flash card application that lets a user learn and memorize any subject. The user can create custom cards with animated pictures, or create English cards where a dictionary definition and a related visual are fetched automatically. The user can then practice their decks in the game mode.'
                     image='https://raw.githubusercontent.com/tumiduong/Mnemosyne/master/docs/screenshots/landing.png'
                     repo='https://github.com/tumiduong/Mnemosyne'
+                    live='http://mnemosyne-app.herokuapp.com/'
                     isOpen={projectOpen === 'Mnemosyne'}
                 />
                 <ProjectCollapse 
