@@ -5,17 +5,16 @@ import styled from 'styled-components';
 import ProjectCollapse from '../project/ProjectCollapse';
 
 export default function ProjectPage() {
-    const [projectOpen, setProjectOpen] = useState('Pokédex');
+    const [projectsOpen, setProjectOpen] = useState(['Pokédex']);
 
     const toggle = (project) => {
-        if (project === projectOpen) {
-            setProjectOpen('')
+        if (projectsOpen.includes(project)) {
+            setProjectOpen(projectsOpen.filter(x => x !== project))
         } else {
-            setProjectOpen(project)
+            setProjectOpen([...projectsOpen, project])
         }
     }
 
-    console.log(projectOpen)
     return (
         <Wrapper>
             <Nav/>
@@ -28,7 +27,7 @@ export default function ProjectPage() {
                     image='./pokedex-espeon.png'
                     repo='https://github.com/tumiduong/pokedex'
                     live='https://tumiduong.github.io/pokedex/'
-                    isOpen={projectOpen === 'Pokédex'}
+                    isOpen={projectsOpen.includes('Pokédex')}
                 />
                 <ProjectCollapse 
                     toggle={toggle}
@@ -38,7 +37,7 @@ export default function ProjectPage() {
                     image='https://raw.githubusercontent.com/tumiduong/Mnemosyne/master/docs/screenshots/landing.png'
                     repo='https://github.com/tumiduong/Mnemosyne'
                     live='http://mnemosyne-app.herokuapp.com/'
-                    isOpen={projectOpen === 'Mnemosyne'}
+                    isOpen={projectsOpen.includes('Mnemosyne')}
                 />
                 <ProjectCollapse 
                     toggle={toggle}
@@ -47,7 +46,7 @@ export default function ProjectPage() {
                     description='Make learning easier with Memo! A site that lets you explore all your educational interests, sorting resourceful posts into collections.'
                     image='https://raw.githubusercontent.com/JCyan90/Memo/master/docs/main-page.png'
                     repo='https://github.com/tumiduong/Memo'
-                    isOpen={projectOpen === 'Memo'}
+                    isOpen={projectsOpen.includes('Memo')}
                 />
                 <ProjectCollapse 
                     toggle={toggle}
@@ -56,7 +55,7 @@ export default function ProjectPage() {
                     description='A mini e-commerce application built with Rails 4.2.'
                     image='https://raw.githubusercontent.com/tumiduong/jungle/master/docs/home-page.png'
                     repo='https://github.com/tumiduong/jungle'
-                    isOpen={projectOpen === 'Jungle'}
+                    isOpen={projectsOpen.includes('Jungle')}
                 />
                 <ProjectCollapse 
                     toggle={toggle}
@@ -65,7 +64,7 @@ export default function ProjectPage() {
                     description='Book and cancel your appointments easily with this Interview Scheduler.'
                     image='https://raw.githubusercontent.com/tumiduong/scheduler/master/docs/add-appointment.png'
                     repo='https://github.com/tumiduong/scheduler'
-                    isOpen={projectOpen === 'Scheduler'}
+                    isOpen={projectsOpen.includes('Scheduler')}
                 />
                 <ProjectCollapse 
                     toggle={toggle}
@@ -74,7 +73,7 @@ export default function ProjectPage() {
                     description='Meowter is a simple, single-page Twitter clone.'
                     image={'./meowter.png'}
                     repo='https://github.com/tumiduong/meowter'
-                    isOpen={projectOpen === 'Meowter'}
+                    isOpen={projectsOpen.includes('Meowter')}
                 />
                 <ProjectCollapse 
                     toggle={toggle}
@@ -83,7 +82,7 @@ export default function ProjectPage() {
                     description='TinyApp is a full stack web application built with Node and Express that allows users to shorten long URLs (à la bit.ly).'
                     image={'./tinyapp.png'}
                     repo='https://github.com/tumiduong/tinyapp'
-                    isOpen={projectOpen === 'TinyApp'}
+                    isOpen={projectsOpen.includes('TinyApp')}
                 />
             </div>
             <ContactMe/>
