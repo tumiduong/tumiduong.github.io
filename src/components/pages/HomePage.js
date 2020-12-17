@@ -47,7 +47,6 @@ export default function HomePage() {
                 </div>
                 <div className='about-me'>
                     <p>I am a full-stack web developer based in Montreal, with a background in retail and cosmetics.</p>
-                    <p>Contact me at <a href="mailto:duong.julie@live.com">duong.julie@live.com</a>.</p>
                 </div>
             </div>
             <ContactMe/>
