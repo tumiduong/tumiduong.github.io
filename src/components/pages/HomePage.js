@@ -31,9 +31,11 @@ export default function HomePage() {
                         <li className='list-item'>Redux</li>
                         <li className='list-item'>Node.js</li>
                         <li className='list-item'>Express</li>
+                        <li className='list-item'>Vue.js</li>        
+                        <li className='list-item'>Vuex</li>   
+                        <li className='list-item'>GraphQL</li>  
                         <li className='list-item'>jQuery</li>
                         <li className='list-item'>Rails</li>
-                        <li className='list-item'>Vue.js</li>         
                     </ul>
                     <ul className='list'>
                         <li className='list-title'>Systems & Databases</li>
