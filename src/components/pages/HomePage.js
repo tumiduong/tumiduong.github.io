@@ -79,14 +79,19 @@ const Wrapper = styled.div`
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-grow: 1;
+            width: 100%;
 
-            .line-deco:before {
-                content: '';
-                display: block;
-                width: 30vw;
-                height: 1px;
-                background-color: #545E56;
-                margin: 15px;
+            .line-deco {
+                width: 40%;
+                
+                &:before {
+                    content: '';
+                    display: block;
+                    height: 1px;
+                    background-color: #545E56;
+                    margin: 15px;
+                }
             }
 
             a {
