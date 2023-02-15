@@ -7,15 +7,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export default function HomePage() {
     return (
         <Wrapper>
-            <Nav/>
+            <Nav />
             <div className='home-page'>
                 <div className='name'>Julie Duong</div>
                 <div className='title'>Web Developer</div>
                 <div className='links'>
-                    <span className='line-deco'/>
-                    <a href="https://github.com/tumiduong"><FontAwesomeIcon icon={['fab', 'github']} size="2x"/></a>
-                    <a href="https://www.linkedin.com/in/tumiduong"><FontAwesomeIcon icon={['fab', 'linkedin']} size="2x"/></a>
-                    <span className='line-deco'/>
+                    <span className='line-deco' />
+                    <a href="https://github.com/tumiduong"><FontAwesomeIcon icon={['fab', 'github']} size="2x" /></a>
+                    <a href="https://www.linkedin.com/in/tumiduong"><FontAwesomeIcon icon={['fab', 'linkedin']} size="2x" /></a>
+                    <span className='line-deco' />
                 </div>
                 <div className='stack-list'>
                     <ul className='list'>
@@ -23,7 +23,8 @@ export default function HomePage() {
                         <li className='list-item'>Javascript</li>
                         <li className='list-item'>HTML5</li>
                         <li className='list-item'>CSS3</li>
-                        <li className='list-item'>Ruby</li>
+                        <li className='list-item'>Python</li>
+                        <li className='list-item'>TypeScript</li>
                     </ul>
                     <ul className='list'>
                         <li className='list-title'>Frameworks & Libraries</li>
@@ -31,27 +32,23 @@ export default function HomePage() {
                         <li className='list-item'>Redux</li>
                         <li className='list-item'>Node.js</li>
                         <li className='list-item'>Express</li>
-                        <li className='list-item'>Vue.js</li>        
-                        <li className='list-item'>Vuex</li>   
-                        <li className='list-item'>GraphQL</li>  
-                        <li className='list-item'>jQuery</li>
-                        <li className='list-item'>Rails</li>
+                        <li className='list-item'>Vue.js</li>
+                        <li className='list-item'>Vuex</li>
+                        <li className='list-item'>GraphQL</li>
                     </ul>
                     <ul className='list'>
                         <li className='list-title'>Systems & Databases</li>
                         <li className='list-item'>Git</li>
                         <li className='list-item'>PostgreSQL</li>
-                    </ul>
-                    <ul className='list'>
-                        <li className='list-title'>Other</li>
-                        <li className='list-item'>Photoshop</li>
+                        <li className='list-item'>Redis</li>
+                        <li className='list-item'>GCP</li>
                     </ul>
                 </div>
                 <div className='about-me'>
                     <p>I am a full-stack web developer based in Montreal, with a background in retail and cosmetics.</p>
                 </div>
             </div>
-            <ContactMe/>
+            <ContactMe />
         </Wrapper>
     )
 }
