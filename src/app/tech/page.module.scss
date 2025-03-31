@@ -9,3 +9,10 @@
     list-style-type: none;
   }
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .page {
+    gap: 18px;
+  }
+}
