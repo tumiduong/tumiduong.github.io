@@ -1,0 +1,17 @@
+.nav {
+    display: flex;
+    gap: 24px;
+
+    .navItem {
+        font-size: 32px;
+        padding: 24px 56px;
+        background-color: #FFFFFF24;
+        border-radius: 24px;
+        display: flex;
+        align-items: center;
+
+        &.active {
+            background-color: #FFFFFF72;
+        }
+    }
+}

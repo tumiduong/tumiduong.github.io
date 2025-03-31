@@ -1,0 +1,12 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 16px 0;
+
+    .footerItem {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+}
