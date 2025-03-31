@@ -15,7 +15,7 @@
     "@mui/icons-material": "^6.4.7",
     "@mui/material": "^6.4.7",
     "lottie-react": "^2.4.1",
-    "next": "15.2.2",
+    "next": "15.2.3",
     "openmeteo": "^1.1.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
