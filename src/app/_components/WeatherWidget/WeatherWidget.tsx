@@ -10,7 +10,7 @@ export const WeatherWidget = (props: {
   isDay: boolean;
 }) => {
   const description = useMemo(() => {
-    if (!props.wmoCode) {
+    if (props.wmoCode === undefined) {
       return;
     }
 
