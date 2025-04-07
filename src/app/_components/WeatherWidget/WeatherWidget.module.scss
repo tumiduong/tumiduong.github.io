@@ -6,7 +6,7 @@
     width: fit-content;
     position: absolute;
     top: 0;
-    // width: 350px;
+    width: 350px;
     height: 175px;
     display: flex;
     justify-content: space-between;
@@ -37,4 +37,37 @@
             }
         }
     }
+
+    .lottie {
+        mask-image: linear-gradient(180deg,#000 90%,transparent);
+        filter: saturate(70%) brightness(115%);
+    }
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .widgetContainer {
+        width: 200px;
+        height: 125px;
+        .content {
+            .city {
+                font-size: 14px;
+            }
+
+            .info {
+                .description {
+                    font-size: 14px;
+                }
+                .temperature {
+                    .value {
+                        font-size: 24px;
+                    }
+                    .unit {
+                        margin-top: 5px;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+ }

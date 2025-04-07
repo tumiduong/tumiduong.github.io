@@ -1,14 +1,17 @@
-import { useMemo } from 'react';
+import { useMemo, useRef } from 'react';
 import styles from './WeatherWidget.module.scss';
 import { WmoCode, wmoCodes } from '@/app/_shared/wmoCodes';
-// import dynamic from 'next/dynamic';
-// const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
+import dynamic from 'next/dynamic';
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
+import { LottieRefCurrentProps } from 'lottie-react';
 
 export const WeatherWidget = (props: {
   temperature: number;
   wmoCode: WmoCode;
   isDay: boolean;
 }) => {
+  const lottieRef = useRef<LottieRefCurrentProps | null>(null);
+
   const description = useMemo(() => {
     if (props.wmoCode === undefined) {
       return;
@@ -17,15 +20,15 @@ export const WeatherWidget = (props: {
     return wmoCodes[props.wmoCode]?.description;
   }, [props.wmoCode]);
 
-  // const animation = useMemo(() => {
-  //   if (!props.wmoCode) {
-  //     return;
-  //   }
+  const animation = useMemo(() => {
+    if (props.wmoCode === undefined) {
+      return;
+    }
 
-  //   const animationKey = props.isDay ? 'dayAnimation' : 'nightAnimation';
+    const animationKey = props.isDay ? 'dayAnimation' : 'nightAnimation';
 
-  //   return wmoCodes[props.wmoCode][animationKey];
-  // }, [props.wmoCode, props.isDay]);
+    return wmoCodes[props.wmoCode][animationKey];
+  }, [props.wmoCode, props.isDay]);
 
   return (
     <div className={styles.widgetContainer}>
@@ -39,11 +42,16 @@ export const WeatherWidget = (props: {
           <div className={styles.description}>{description}</div>
         </div>
       </div>
-      {/* <Lottie
+      <Lottie
+        lottieRef={lottieRef}
         animationData={animation}
         alt={`${description} animation`}
-        style={{ height: '100%' }}
-      /> */}
+        style={{
+          height: '100%',
+        }}
+        onDOMLoaded={() => lottieRef?.current?.setSpeed(0.4)}
+        className={styles.lottie}
+      />
     </div>
   );
 };

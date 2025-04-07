@@ -32,6 +32,8 @@
 /* Medium devices (landscape tablets, 1200px and down) */
 @media only screen and (min-width: 601px) and (max-width: 1200px) {
     .nav {
+        flex-direction: column;
+        gap: 8px;
         .navItem {
             font-size: 28px;
             padding: 16px 48px;
